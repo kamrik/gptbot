@@ -4,7 +4,7 @@ import dotenv
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 
-dotenv.load_dotenv(dotenv_path= os.path.join(file_dir, ".env"))
+dotenv.load_dotenv(dotenv_path= os.path.join(file_dir, "azure.env"))
 # envirionments (or define here)
 LOG_LEVEL = getenv("LOG_LEVEL", "DEBUG").upper()
 BOT_TOKEN = getenv("BOT_TOKEN")
