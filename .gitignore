@@ -121,6 +121,7 @@ celerybeat.pid
 
 # Environments
 .env
+azure.env
 .venv
 env/
 venv/
