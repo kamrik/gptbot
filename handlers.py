@@ -23,7 +23,15 @@ async def on_new(message: types.Message) -> None:
   await message.answer(_t("bot.new_chat"))
   thread = await get_thread(message.from_user.id, new_thread=True)
   logger.debug(f"on_new:{thread}")
+  
 
+@router.message(Command("help"))
+async def on_new(message: types.Message) -> None:
+  await message.answer('\n'.join([
+    "Bot commands:",
+    "/new - start a new chat",
+    "/tutor - change the Agent (tutor) to talk to",
+  ]))
 
 @router.message(Command("tutor"))
 async def on_tutor(message: types.Message) -> None:
